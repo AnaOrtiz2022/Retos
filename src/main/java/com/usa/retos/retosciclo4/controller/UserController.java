@@ -44,8 +44,8 @@ public class UserController {
         return userService.authenticateUser(email, password);
     }
 
-    @GetMapping("/emailexists/{email}")
-    public boolean emailExists(@PathVariable("email") String email){
+    @GetMapping("/emailexist/{email}")
+    public boolean emailExist(@PathVariable("email") String email){
         return userService.emailExists(email);
     }
 

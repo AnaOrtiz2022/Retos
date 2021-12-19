@@ -6,28 +6,25 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-/**
- *
- * @author ana_o
- */
-@Document(collection = "users")
+//import java.util.Date;
 
+@Document(collection = "users")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 
 public class User {
-
     @Id
     private Integer id;
     private String identification;
     private String name;
-    //private Date birthtDay;
-//private String monthBirthtDay;
+    /* private Date birthtDay;
+    private String monthBirthtDay;*/
     private String address;
     private String cellPhone;
     private String email;
     private String password;
     private String zone;
     private String type;
+
 }

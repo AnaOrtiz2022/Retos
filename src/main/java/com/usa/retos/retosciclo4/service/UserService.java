@@ -8,36 +8,31 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-/**
- *
- * @author ana_o
- */
-@Service //Se conecta con la capa de repository
+@Service
 public class UserService {
-
     @Autowired
     private UserRepository userRepository;
 
-    public List<User> getAll() {
+    public List<User> getAll(){
         return userRepository.getAll();
     }
 
-    public Optional<User> getUser(int id) {
+    public Optional<User> getUser(int id){
         return userRepository.getUser(id);
     }
 
-    public User save(User user) {
-        if (user.getId() == null) {
+    public User save(User user){
+        if(user.getId() == null) {
             return user;
-        } else {
+        }else{
             Optional<User> e = userRepository.getUser(user.getId());
-            if (e.isEmpty()) {
-                if (emailExists(user.getEmail()) == false) {
+            if(e.isEmpty()){
+                if(emailExists(user.getEmail())==false){
                     return userRepository.save(user);
-                } else {
+                }else{
                     return user;
                 }
-            } else {
+            }else{
                 return user;
             }
         }
@@ -48,7 +43,7 @@ public class UserService {
     }
 
     public User update(User user) {
-        if (user.getId() != null) {
+        if(user.getId() != null) {
             Optional<User> dbUser = userRepository.getUser(user.getId());
             if (!dbUser.isEmpty()) {
                 if (user.getIdentification() != null) {
@@ -77,14 +72,13 @@ public class UserService {
             } else {
                 return user;
             }
-        } else {
+        }else{
             return user;
         }
     }
 
-    //Expresión regular
     public boolean delete(int userId) {
-        return getUser(userId).map(user -> {
+        return getUser(userId).map(user ->{
             userRepository.delete(user);
             return true;
         }).orElse(false);
@@ -98,5 +92,4 @@ public class UserService {
             return user.get();
         }
     }
-
 }
