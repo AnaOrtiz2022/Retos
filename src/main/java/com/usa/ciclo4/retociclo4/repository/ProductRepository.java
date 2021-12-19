@@ -36,4 +36,13 @@ public class ProductRepository {
         productCrudRepository.delete(product);
     }
 
+    public List<Product> getByPrice(double price){
+        return productCrudRepository.findByPriceLessThanEqual(price);
+    }
+
+    public List<Product> getByDescriptionContains(String description){
+        return productCrudRepository.findByDescriptionContainingIgnoreCase(description);
+    }
+
+
 }

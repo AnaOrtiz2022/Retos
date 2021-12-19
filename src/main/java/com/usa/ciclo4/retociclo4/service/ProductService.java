@@ -72,4 +72,13 @@ public class ProductService {
             return true;
         }).orElse(false);
     }
+
+    public List<Product> getByPrice(double price){
+        return productRepository.getByPrice(price);
+    }
+
+    public List<Product> getByDescriptionContains(String description){
+        return productRepository.getByDescriptionContains(description);
+    }
+
 }
