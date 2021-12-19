@@ -29,7 +29,7 @@ public class ProductController {
     }
 
     @PutMapping("/update")
-    @ResponseStatus(HttpStatus.ACCEPTED)
+    @ResponseStatus(HttpStatus.CREATED)
     public Product update(@RequestBody Product product){
         return productService.update(product);
     }
