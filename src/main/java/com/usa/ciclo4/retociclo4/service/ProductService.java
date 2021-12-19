@@ -34,15 +34,15 @@ public class ProductService {
         if (product.getReference() != null) {
             Optional<Product> dbProduct = productRepository.getProduct(product.getReference());
             if (!dbProduct.isEmpty()) {
-                /*if (product.getBrand() != null) {
+                /* if (product.getBrand() != null) {
                     dbProduct.get().setBrand(product.getBrand());
                 }*/
                 if (product.getCategory() != null) {
                     dbProduct.get().setCategory(product.getCategory());
                 }
-                if (product.getPresentation() != null) {
+                /*if (product.getPresentation() != null) {
                     dbProduct.get().setPresentation(product.getPresentation());
-                }
+                }*/
                 if (product.getDescription() != null) {
                     dbProduct.get().setDescription(product.getDescription());
                 }
@@ -72,7 +72,7 @@ public class ProductService {
             return true;
         }).orElse(false);
     }
-
+/*
     public List<Product> getByPrice(double price){
         return productRepository.getByPrice(price);
     }
@@ -80,5 +80,5 @@ public class ProductService {
     public List<Product> getByDescriptionContains(String description){
         return productRepository.getByDescriptionContains(description);
     }
-
+*/
 }

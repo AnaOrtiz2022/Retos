@@ -1,4 +1,4 @@
-package com.usa.ciclo4.retociclo4.repository;
+/*package com.usa.ciclo4.retociclo4.repository;
 
 import com.usa.ciclo4.retociclo4.model.Order;
 import com.usa.ciclo4.retociclo4.repository.crudrepository.OrderCrudRepository;
@@ -51,7 +51,7 @@ public class OrderRepository {
     /*public List<Order> getOrderByRegisterDayAndSalesManId(Date registerDay, Integer id){
         return orderCrudRepository.findByRegisterDayAndSalesManId(registerDay, id);
     }*/
-
+/*
     public List<Order> getByRegisterDayAndSalesManId(String registerDay, Integer id){
         try {
             return orderCrudRepository.findByRegisterDayAndSalesManId(new SimpleDateFormat("yyyy-MM-dd").parse(registerDay), id);
@@ -65,4 +65,4 @@ public class OrderRepository {
 
 
 
-}
+}*/

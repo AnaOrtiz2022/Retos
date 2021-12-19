@@ -1,4 +1,4 @@
-package com.usa.ciclo4.retociclo4.service;
+/*package com.usa.ciclo4.retociclo4.service;
 
 import com.usa.ciclo4.retociclo4.model.Order;
 import com.usa.ciclo4.retociclo4.repository.OrderRepository;
@@ -89,10 +89,10 @@ public class OrderService {
     /*public List<Order> getOrderByRegisterDayAndSalesManId(Date registerDay, Integer id){
         return orderRepository.getOrderByRegisterDayAndSalesManId(registerDay, id);
     }*/
-
+/*
     public List<Order> getByRegisterDayAndSalesManId(String registerDay, Integer id){
         return orderRepository.getByRegisterDayAndSalesManId(registerDay, id);
     }
 
 
-}
+}*/

@@ -1,6 +1,6 @@
 package com.usa.ciclo4.retociclo4.controller;
 
-import com.usa.ciclo4.retociclo4.model.Order;
+/*import com.usa.ciclo4.retociclo4.model.Order;
 import com.usa.ciclo4.retociclo4.model.Product;
 import com.usa.ciclo4.retociclo4.model.User;
 import com.usa.ciclo4.retociclo4.service.OrderService;
@@ -67,7 +67,7 @@ public class OrderController {
     public List<Order> RegisterDayAndSalesManIdExist(@PathVariable("id") int id, @PathVariable("registerDay") Date registerDay){
         return orderService.getOrderByRegisterDayAndSalesManId(registerDay, id);
     }*/
-
+/*
     @GetMapping("/date/{registerDay}/{id}")
     public List<Order> getByRegisterDayAndSalesManId(@PathVariable("registerDay")String  registerDay,@PathVariable("id") Integer id){
         return orderService.getByRegisterDayAndSalesManId(registerDay, id);
@@ -75,4 +75,4 @@ public class OrderController {
 
 
 
-}
+}*/

@@ -1,4 +1,4 @@
-package com.usa.ciclo4.retociclo4.model;
+/*package com.usa.ciclo4.retociclo4.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -25,4 +25,4 @@ public class Order {
     private User salesMan;
     private Map<String, Product> products;
     private Map<String, Integer> quantities;
-}
+}*/
