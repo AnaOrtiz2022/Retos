@@ -28,6 +28,7 @@ public class UserController {
     }
 
     @PutMapping("/update")
+    @ResponseStatus(HttpStatus.CREATED)
     public User update(@RequestBody User user){
         return userService.update(user);
     }
